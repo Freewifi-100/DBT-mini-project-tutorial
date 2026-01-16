@@ -1,0 +1,714 @@
+[0m20:48:09.543407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051cb170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051e5670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051e52b0>]}
+
+
+============================== 20:48:09.563728 | 9ebdcfbe-d1b6-4ebe-b009-7a6b114f23d3 ==============================
+[0m20:48:09.563728 [info ] [MainThread]: Running with dbt=1.11.2
+[0m20:48:09.564014 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'write_json': 'True', 'log_path': 'logs', 'printer_width': '80', 'static_parser': 'True', 'indirect_selection': 'eager', 'profiles_dir': '/Users/wangaim/.dbt', 'log_cache_events': 'False', 'introspect': 'True', 'no_print': 'None', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'warn_error': 'None', 'quiet': 'False', 'debug': 'False', 'use_colors': 'True', 'cache_selected_only': 'False', 'version_check': 'True', 'empty': 'None', 'fail_fast': 'False', 'log_format': 'default'}
+[0m20:49:17.816992 [debug] [MainThread]: Starter project path: /Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m20:49:17.821997 [info ] [MainThread]: 
+Your new dbt project "ansh_dbt_youtube" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:49:17.822325 [info ] [MainThread]: Setting up your profile.
+[0m20:49:17.823419 [error] [MainThread]: Encountered an error:
+mapping values are not allowed here
+  in "/Users/wangaim/.dbt/profiles.yml", line 4, column 12
+[0m20:49:17.828158 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/cli/main.py", line 483, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 248, in setup_profile
+    if not self.check_if_can_write_profile(profile_name=profile_name):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 209, in check_if_can_write_profile
+    profiles = yaml.safe_load(f) or {}
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/yaml/composer.py", line 58, in compose_document
+    self.get_event()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/yaml/parser.py", line 118, in get_event
+    self.current_event = self.state()
+                         ^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/yaml/parser.py", line 193, in parse_document_end
+    token = self.peek_token()
+            ^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/yaml/scanner.py", line 129, in peek_token
+    self.fetch_more_tokens()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/yaml/scanner.py", line 223, in fetch_more_tokens
+    return self.fetch_value()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/yaml/scanner.py", line 577, in fetch_value
+    raise ScannerError(None, None,
+yaml.scanner.ScannerError: mapping values are not allowed here
+  in "/Users/wangaim/.dbt/profiles.yml", line 4, column 12
+
+[0m20:49:17.834493 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 68.30816, "process_in_blocks": "0", "process_kernel_time": 0.144119, "process_mem_max_rss": "127500288", "process_out_blocks": "0", "process_user_time": 0.550373}
+[0m20:49:17.835036 [debug] [MainThread]: Command `dbt init` failed at 20:49:17.834945 after 68.31 seconds
+[0m20:49:17.835499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104db9ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051e5790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051e52b0>]}
+[0m20:49:17.835823 [debug] [MainThread]: Flushing usage events
+[0m20:49:19.158535 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:50:36.818974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057d3140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079665a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107966210>]}
+
+
+============================== 20:50:36.821318 | e7379275-6abb-476d-830a-d43be4ba9ec3 ==============================
+[0m20:50:36.821318 [info ] [MainThread]: Running with dbt=1.11.2
+[0m20:50:36.821604 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'log_cache_events': 'False', 'use_colors': 'True', 'quiet': 'False', 'cache_selected_only': 'False', 'no_print': 'None', 'debug': 'False', 'fail_fast': 'False', 'static_parser': 'True', 'invocation_command': 'dbt init', 'partial_parse': 'True', 'empty': 'None', 'log_path': 'logs', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/wangaim/.dbt', 'log_format': 'default', 'indirect_selection': 'eager', 'introspect': 'True', 'warn_error': 'None', 'version_check': 'True'}
+[0m20:51:07.511252 [debug] [MainThread]: Starter project path: /Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m20:51:07.524492 [info ] [MainThread]: 
+Your new dbt project "ansh_dbt_youtube" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:51:07.525693 [info ] [MainThread]: Setting up your profile.
+[0m20:51:32.204062 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:51:32.204478 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:51:32.204669 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:56:41.017444 [info ] [MainThread]: Profile ansh_dbt_youtube written to /Users/wangaim/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m20:56:41.026850 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 364.24637, "process_in_blocks": "0", "process_kernel_time": 0.382321, "process_mem_max_rss": "314064896", "process_out_blocks": "0", "process_user_time": 2.081298}
+[0m20:56:41.029122 [debug] [MainThread]: Command `dbt init` succeeded at 20:56:41.028951 after 364.25 seconds
+[0m20:56:41.029893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107966480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b463c20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b9681a0>]}
+[0m20:56:41.030416 [debug] [MainThread]: Flushing usage events
+[0m20:56:42.396758 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:57:03.471798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092c8980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ed6600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ed6210>]}
+
+
+============================== 20:57:03.474330 | aa3e1543-17e7-4779-8aa7-3358058675ca ==============================
+[0m20:57:03.474330 [info ] [MainThread]: Running with dbt=1.11.2
+[0m20:57:03.474630 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'quiet': 'False', 'log_format': 'default', 'target_path': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'no_print': 'None', 'empty': 'None', 'introspect': 'True', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'static_parser': 'True', 'profiles_dir': '/Users/wangaim/.dbt', 'use_colors': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'printer_width': '80'}
+[0m20:57:03.484818 [info ] [MainThread]: dbt version: 1.11.2
+[0m20:57:03.484999 [info ] [MainThread]: python version: 3.12.3
+[0m20:57:03.485133 [info ] [MainThread]: python path: /Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/bin/python3
+[0m20:57:03.485259 [info ] [MainThread]: os info: macOS-15.6.1-arm64-arm-64bit
+[0m20:57:03.992232 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:57:03.992517 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:57:03.992662 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:57:04.542183 [info ] [MainThread]: Using profiles dir at /Users/wangaim/.dbt
+[0m20:57:04.542469 [info ] [MainThread]: Using profiles.yml file at /Users/wangaim/.dbt/profiles.yml
+[0m20:57:04.542617 [info ] [MainThread]: Using dbt_project.yml file at /Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/dbt_project.yml
+[0m20:57:04.542761 [info ] [MainThread]: adapter type: databricks
+[0m20:57:04.542882 [info ] [MainThread]: adapter version: 1.11.4
+[0m20:57:04.543016 [info ] [MainThread]: Configuration:
+[0m20:57:04.543135 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:57:04.543256 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:57:04.543372 [info ] [MainThread]: Required dependencies:
+[0m20:57:04.543526 [debug] [MainThread]: Executing "git --help"
+[0m20:57:04.559390 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:57:04.559886 [debug] [MainThread]: STDERR: "b''"
+[0m20:57:04.560051 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:57:04.560207 [info ] [MainThread]: Connection:
+[0m20:57:04.560380 [info ] [MainThread]:   host: dbc-fe1b0e50-78c9.cloud.databricks.com
+[0m20:57:04.560507 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/77605c64532b934b
+[0m20:57:04.560625 [info ] [MainThread]:   catalog: dbt_tutorial_dev
+[0m20:57:04.560744 [info ] [MainThread]:   schema: default
+[0m20:57:04.561023 [info ] [MainThread]: Registered adapter: databricks=1.11.4
+[0m20:57:04.667457 [warn ] [MainThread]: [[33mWARNING[0m]: Use managed Iceberg tables when table_format is iceberg. When this flag is disabled, UniForm is used instead.
+You may opt into the new behavior sooner by setting `flags.use_managed_iceberg` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m20:57:04.667877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'aa3e1543-17e7-4779-8aa7-3358058675ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f6bc50>]}
+[0m20:57:04.668248 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m20:57:04.668384 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m20:57:04.668516 [debug] [MainThread]: Using databricks connection "debug"
+[0m20:57:04.668640 [debug] [MainThread]: On debug: select 1 as id
+[0m20:57:04.668765 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:59:07.369626 [error] [MainThread]: Encountered an error:
+
+[0m20:59:07.402190 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1042, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1320, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/cli/main.py", line 420, in debug
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/task/debug.py", line 144, in run
+    connection_status = self.test_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/task/debug.py", line 465, in test_connection
+    connection_result = self.attempt_connection(self.profile)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/task/debug.py", line 443, in attempt_connection
+    adapter.debug_query()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/spark/impl.py", line 519, in debug_query
+    self.execute("select 1 as id")
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/impl.py", line 406, in execute
+    return super().execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt_common/record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/base/impl.py", line 471, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 368, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 340, in add_query
+    handle: DatabricksHandle = connection.handle
+                               ^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 509, in open
+    return cls.retry_connection(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/base/connections.py", line 237, in retry_connection
+    connection.handle = connect()
+                        ^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 484, in connect
+    conn = DatabricksHandle.from_connection_args(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/handle.py", line 211, in from_connection_args
+    conn = dbsql.connect(**conn_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/__init__.py", line 90, in connect
+    return Connection(server_hostname, http_path, access_token, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/client.py", line 274, in __init__
+    self.session.open()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/session.py", line 132, in open
+    self._session_id = self.backend.open_session(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/backend/thrift_backend.py", line 601, in open_session
+    response = self.make_request(self._client.OpenSession, open_session_req)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/backend/thrift_backend.py", line 512, in make_request
+    response_or_error_info = attempt_request(attempt)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/backend/thrift_backend.py", line 417, in attempt_request
+    response = method(request)
+               ^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/thrift_api/TCLIService/TCLIService.py", line 204, in OpenSession
+    self.send_OpenSession(req)
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/thrift_api/TCLIService/TCLIService.py", line 213, in send_OpenSession
+    self._oprot.trans.flush()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/auth/thrift_http_client.py", line 193, in flush
+    self.__resp = self.__pool.request(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  [Previous line repeated 2 more times]
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries.sleep()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 379, in sleep
+    self._sleep_backoff()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 363, in _sleep_backoff
+    time.sleep(backoff)
+KeyboardInterrupt
+
+[0m20:59:07.409198 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 123.96872, "process_in_blocks": "0", "process_kernel_time": 0.338033, "process_mem_max_rss": "217923584", "process_out_blocks": "0", "process_user_time": 1.26093}
+[0m20:59:07.412940 [debug] [MainThread]: Command `dbt debug` failed at 20:59:07.412830 after 123.97 seconds
+[0m20:59:07.413551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ed6480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a4e2f60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ae87920>]}
+[0m20:59:07.413914 [debug] [MainThread]: Flushing usage events
+[0m20:59:08.666626 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:59:58.342193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108131520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108eee510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108eee0f0>]}
+
+
+============================== 20:59:58.344548 | 5499495f-90ba-4d2b-b877-a4b9dbfb6b7f ==============================
+[0m20:59:58.344548 [info ] [MainThread]: Running with dbt=1.11.2
+[0m20:59:58.344858 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'version_check': 'True', 'no_print': 'None', 'profiles_dir': '/Users/wangaim/.dbt', 'introspect': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'log_path': 'logs', 'quiet': 'False', 'log_cache_events': 'False', 'use_colors': 'True', 'debug': 'False', 'empty': 'None', 'printer_width': '80', 'write_json': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'log_format': 'default'}
+[0m20:59:58.353046 [info ] [MainThread]: dbt version: 1.11.2
+[0m20:59:58.353248 [info ] [MainThread]: python version: 3.12.3
+[0m20:59:58.353393 [info ] [MainThread]: python path: /Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/bin/python3
+[0m20:59:58.353528 [info ] [MainThread]: os info: macOS-15.6.1-arm64-arm-64bit
+[0m20:59:58.708186 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:59:58.708471 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:59:58.708626 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:59:59.201643 [info ] [MainThread]: Using profiles dir at /Users/wangaim/.dbt
+[0m20:59:59.201900 [info ] [MainThread]: Using profiles.yml file at /Users/wangaim/.dbt/profiles.yml
+[0m20:59:59.202051 [info ] [MainThread]: Using dbt_project.yml file at /Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/dbt_project.yml
+[0m20:59:59.202186 [info ] [MainThread]: adapter type: databricks
+[0m20:59:59.202313 [info ] [MainThread]: adapter version: 1.11.4
+[0m20:59:59.202440 [info ] [MainThread]: Configuration:
+[0m20:59:59.202563 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:59:59.202681 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:59:59.202800 [info ] [MainThread]: Required dependencies:
+[0m20:59:59.202947 [debug] [MainThread]: Executing "git --help"
+[0m20:59:59.221091 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:59:59.221574 [debug] [MainThread]: STDERR: "b''"
+[0m20:59:59.221725 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:59:59.221889 [info ] [MainThread]: Connection:
+[0m20:59:59.222057 [info ] [MainThread]:   host: dbc-fe1b0e50-78c9.cloud.databricks.com
+[0m20:59:59.222181 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/77605c64532b934b
+[0m20:59:59.222304 [info ] [MainThread]:   catalog: dbt_tutorial_dev
+[0m20:59:59.222421 [info ] [MainThread]:   schema: default
+[0m20:59:59.222700 [info ] [MainThread]: Registered adapter: databricks=1.11.4
+[0m20:59:59.318696 [warn ] [MainThread]: [[33mWARNING[0m]: Use managed Iceberg tables when table_format is iceberg. When this flag is disabled, UniForm is used instead.
+You may opt into the new behavior sooner by setting `flags.use_managed_iceberg` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m20:59:59.319088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '5499495f-90ba-4d2b-b877-a4b9dbfb6b7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f8fb00>]}
+[0m20:59:59.319430 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m20:59:59.319578 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m20:59:59.319720 [debug] [MainThread]: Using databricks connection "debug"
+[0m20:59:59.319850 [debug] [MainThread]: On debug: select 1 as id
+[0m20:59:59.319964 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:00:21.829476 [error] [MainThread]: Encountered an error:
+
+[0m21:00:21.845011 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1042, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1320, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/cli/main.py", line 420, in debug
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/task/debug.py", line 144, in run
+    connection_status = self.test_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/task/debug.py", line 465, in test_connection
+    connection_result = self.attempt_connection(self.profile)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/task/debug.py", line 443, in attempt_connection
+    adapter.debug_query()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/spark/impl.py", line 519, in debug_query
+    self.execute("select 1 as id")
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/impl.py", line 406, in execute
+    return super().execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt_common/record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/base/impl.py", line 471, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 368, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 340, in add_query
+    handle: DatabricksHandle = connection.handle
+                               ^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 509, in open
+    return cls.retry_connection(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/base/connections.py", line 237, in retry_connection
+    connection.handle = connect()
+                        ^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 484, in connect
+    conn = DatabricksHandle.from_connection_args(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/handle.py", line 211, in from_connection_args
+    conn = dbsql.connect(**conn_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/__init__.py", line 90, in connect
+    return Connection(server_hostname, http_path, access_token, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/client.py", line 274, in __init__
+    self.session.open()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/session.py", line 132, in open
+    self._session_id = self.backend.open_session(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/backend/thrift_backend.py", line 601, in open_session
+    response = self.make_request(self._client.OpenSession, open_session_req)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/backend/thrift_backend.py", line 512, in make_request
+    response_or_error_info = attempt_request(attempt)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/backend/thrift_backend.py", line 417, in attempt_request
+    response = method(request)
+               ^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/thrift_api/TCLIService/TCLIService.py", line 204, in OpenSession
+    self.send_OpenSession(req)
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/thrift_api/TCLIService/TCLIService.py", line 213, in send_OpenSession
+    self._oprot.trans.flush()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/auth/thrift_http_client.py", line 193, in flush
+    self.__resp = self.__pool.request(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries.sleep()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 379, in sleep
+    self._sleep_backoff()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 363, in _sleep_backoff
+    time.sleep(backoff)
+KeyboardInterrupt
+
+[0m21:00:21.848662 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 23.537474, "process_in_blocks": "0", "process_kernel_time": 0.276659, "process_mem_max_rss": "220381184", "process_out_blocks": "0", "process_user_time": 1.160672}
+[0m21:00:21.849268 [debug] [MainThread]: Command `dbt debug` failed at 21:00:21.849208 after 23.54 seconds
+[0m21:00:21.849543 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083a2000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11012bc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ff373b0>]}
+[0m21:00:21.849769 [debug] [MainThread]: Flushing usage events
+[0m21:00:23.006648 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:32:27.761409 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102ead7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ed6540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ed6120>]}
+
+
+============================== 21:32:27.763690 | 2bdb9b2d-41d9-4790-ae0e-024c8303e2d4 ==============================
+[0m21:32:27.763690 [info ] [MainThread]: Running with dbt=1.11.2
+[0m21:32:27.763988 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'log_path': 'logs', 'empty': 'None', 'warn_error': 'None', 'introspect': 'True', 'log_cache_events': 'False', 'profiles_dir': '/Users/wangaim/.dbt', 'quiet': 'False', 'use_experimental_parser': 'False', 'log_format': 'default', 'use_colors': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'partial_parse': 'True', 'write_json': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'no_print': 'None', 'indirect_selection': 'eager', 'target_path': 'None'}
+[0m21:32:27.772656 [info ] [MainThread]: dbt version: 1.11.2
+[0m21:32:27.773009 [info ] [MainThread]: python version: 3.12.3
+[0m21:32:27.773172 [info ] [MainThread]: python path: /Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/bin/python3
+[0m21:32:27.773311 [info ] [MainThread]: os info: macOS-15.6.1-arm64-arm-64bit
+[0m21:32:28.130663 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m21:32:28.130915 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m21:32:28.131064 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m21:32:28.618151 [info ] [MainThread]: Using profiles dir at /Users/wangaim/.dbt
+[0m21:32:28.618418 [info ] [MainThread]: Using profiles.yml file at /Users/wangaim/.dbt/profiles.yml
+[0m21:32:28.618569 [info ] [MainThread]: Using dbt_project.yml file at /Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/dbt_project.yml
+[0m21:32:28.618703 [info ] [MainThread]: adapter type: databricks
+[0m21:32:28.618832 [info ] [MainThread]: adapter version: 1.11.4
+[0m21:32:28.618960 [info ] [MainThread]: Configuration:
+[0m21:32:28.619083 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:32:28.619205 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m21:32:28.619322 [info ] [MainThread]: Required dependencies:
+[0m21:32:28.619473 [debug] [MainThread]: Executing "git --help"
+[0m21:32:28.632293 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:32:28.632818 [debug] [MainThread]: STDERR: "b''"
+[0m21:32:28.632986 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:32:28.633154 [info ] [MainThread]: Connection:
+[0m21:32:28.633331 [info ] [MainThread]:   host: dbc-fe1b0e50-78c9.cloud.databricks.com
+[0m21:32:28.633460 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/77605c64532b934b
+[0m21:32:28.633587 [info ] [MainThread]:   catalog: dbt_tutorial_dev
+[0m21:32:28.633710 [info ] [MainThread]:   schema: default
+[0m21:32:28.633999 [info ] [MainThread]: Registered adapter: databricks=1.11.4
+[0m21:32:28.729817 [warn ] [MainThread]: [[33mWARNING[0m]: Use managed Iceberg tables when table_format is iceberg. When this flag is disabled, UniForm is used instead.
+You may opt into the new behavior sooner by setting `flags.use_managed_iceberg` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m21:32:28.730218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '2bdb9b2d-41d9-4790-ae0e-024c8303e2d4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10687b920>]}
+[0m21:32:28.730549 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m21:32:28.730691 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m21:32:28.730823 [debug] [MainThread]: Using databricks connection "debug"
+[0m21:32:28.730943 [debug] [MainThread]: On debug: select 1 as id
+[0m21:32:28.731054 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:35:47.141486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104548440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ef2390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ef1f70>]}
+
+
+============================== 21:35:47.144708 | f6746ef6-1d8b-4bfa-97f7-08cb8dcef439 ==============================
+[0m21:35:47.144708 [info ] [MainThread]: Running with dbt=1.11.2
+[0m21:35:47.145103 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'profiles_dir': '/Users/wangaim/.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'no_print': 'None', 'static_parser': 'True', 'write_json': 'True', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'fail_fast': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'printer_width': '80', 'warn_error': 'None', 'partial_parse': 'True', 'empty': 'None', 'log_path': 'logs', 'introspect': 'True', 'quiet': 'False', 'debug': 'False', 'use_experimental_parser': 'False'}
+[0m21:35:47.155916 [info ] [MainThread]: dbt version: 1.11.2
+[0m21:35:47.156356 [info ] [MainThread]: python version: 3.12.3
+[0m21:35:47.156524 [info ] [MainThread]: python path: /Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/bin/python3
+[0m21:35:47.156662 [info ] [MainThread]: os info: macOS-15.6.1-arm64-arm-64bit
+[0m21:35:47.537848 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m21:35:47.538110 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m21:35:47.538259 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m21:35:47.904804 [info ] [MainThread]: Using profiles dir at /Users/wangaim/.dbt
+[0m21:35:47.905084 [info ] [MainThread]: Using profiles.yml file at /Users/wangaim/.dbt/profiles.yml
+[0m21:35:47.905265 [info ] [MainThread]: Using dbt_project.yml file at /Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/dbt_project.yml
+[0m21:35:47.905403 [info ] [MainThread]: adapter type: databricks
+[0m21:35:47.905557 [info ] [MainThread]: adapter version: 1.11.4
+[0m21:35:47.905700 [info ] [MainThread]: Configuration:
+[0m21:35:47.905818 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:35:47.905942 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m21:35:47.906058 [info ] [MainThread]: Required dependencies:
+[0m21:35:47.906211 [debug] [MainThread]: Executing "git --help"
+[0m21:35:47.913702 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:35:47.914298 [debug] [MainThread]: STDERR: "b''"
+[0m21:35:47.914479 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:35:47.914642 [info ] [MainThread]: Connection:
+[0m21:35:47.914814 [info ] [MainThread]:   host: dbc-fe1b0e50-78c9.cloud.databricks.com
+[0m21:35:47.914959 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/77605c64532b934b
+[0m21:35:47.915081 [info ] [MainThread]:   catalog: dbt_tutorial_dev
+[0m21:35:47.915204 [info ] [MainThread]:   schema: default
+[0m21:35:47.915479 [info ] [MainThread]: Registered adapter: databricks=1.11.4
+[0m21:35:48.012225 [warn ] [MainThread]: [[33mWARNING[0m]: Use managed Iceberg tables when table_format is iceberg. When this flag is disabled, UniForm is used instead.
+You may opt into the new behavior sooner by setting `flags.use_managed_iceberg` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m21:35:48.012671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'f6746ef6-1d8b-4bfa-97f7-08cb8dcef439', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e9a5a0>]}
+[0m21:35:48.013013 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m21:35:48.013146 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m21:35:48.013277 [debug] [MainThread]: Using databricks connection "debug"
+[0m21:35:48.013398 [debug] [MainThread]: On debug: select 1 as id
+[0m21:35:48.013514 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:36:16.812100 [error] [MainThread]: Encountered an error:
+
+[0m21:36:16.835238 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/util/ssl_.py", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1042, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1320, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/cli/main.py", line 420, in debug
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/task/debug.py", line 144, in run
+    connection_status = self.test_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/task/debug.py", line 465, in test_connection
+    connection_result = self.attempt_connection(self.profile)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/task/debug.py", line 443, in attempt_connection
+    adapter.debug_query()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/spark/impl.py", line 519, in debug_query
+    self.execute("select 1 as id")
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/impl.py", line 406, in execute
+    return super().execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt_common/record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/base/impl.py", line 471, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 368, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 340, in add_query
+    handle: DatabricksHandle = connection.handle
+                               ^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 509, in open
+    return cls.retry_connection(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/base/connections.py", line 237, in retry_connection
+    connection.handle = connect()
+                        ^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 484, in connect
+    conn = DatabricksHandle.from_connection_args(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/dbt/adapters/databricks/handle.py", line 211, in from_connection_args
+    conn = dbsql.connect(**conn_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/__init__.py", line 90, in connect
+    return Connection(server_hostname, http_path, access_token, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/client.py", line 274, in __init__
+    self.session.open()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/session.py", line 132, in open
+    self._session_id = self.backend.open_session(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/backend/thrift_backend.py", line 601, in open_session
+    response = self.make_request(self._client.OpenSession, open_session_req)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/backend/thrift_backend.py", line 512, in make_request
+    response_or_error_info = attempt_request(attempt)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/backend/thrift_backend.py", line 417, in attempt_request
+    response = method(request)
+               ^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/thrift_api/TCLIService/TCLIService.py", line 204, in OpenSession
+    self.send_OpenSession(req)
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/thrift_api/TCLIService/TCLIService.py", line 213, in send_OpenSession
+    self._oprot.trans.flush()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/databricks/sql/auth/thrift_http_client.py", line 193, in flush
+    self.__resp = self.__pool.request(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries.sleep()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 379, in sleep
+    self._sleep_backoff()
+  File "/Users/wangaim/learn-coding/data-engineer/practice-dbt/project1/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 363, in _sleep_backoff
+    time.sleep(backoff)
+KeyboardInterrupt
+
+[0m21:36:16.841101 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 29.734663, "process_in_blocks": "0", "process_kernel_time": 0.251531, "process_mem_max_rss": "222134272", "process_out_blocks": "0", "process_user_time": 1.189505}
+[0m21:36:16.841827 [debug] [MainThread]: Command `dbt debug` failed at 21:36:16.841741 after 29.74 seconds
+[0m21:36:16.842217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ef2390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c573b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfb1280>]}
+[0m21:36:16.842516 [debug] [MainThread]: Flushing usage events
+[0m21:36:18.098760 [debug] [MainThread]: An error was encountered while trying to flush usage events
