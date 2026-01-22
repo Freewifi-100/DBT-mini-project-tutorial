@@ -34,7 +34,7 @@ models:
     bronze:
       +materialized: table
       schema: bronze
-    sillver:
+    silver:
       +materialized: table
       schema: silver
     gold:
