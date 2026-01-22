@@ -1,0 +1,1 @@
+select {{multiply(4, 5)}} as result
